@@ -8,8 +8,8 @@ class ObstacleManager(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
-        self.shape('square')
-        self.shapesize(1.5, 3)
+        self.shape('circle')
+        self.shapesize(4, 4)
         self.color(choice(COLORS))
         self.setheading(180)
         self.goto(randint(-70,270),randint(-250, 250))
@@ -18,5 +18,5 @@ class ObstacleManager(Turtle):
     
     def left_border(self):
             self.hideturtle()
-            self.goto(x=randint(0, 280), y=randint(-250, 250))
+            self.goto(x=randint(0, 280), y=randint(-200, 200))
             self.showturtle()
