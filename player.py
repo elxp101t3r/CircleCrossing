@@ -34,7 +34,7 @@ class Player(Turtle):
     def left_border(self):
         self.move_right()
     
-    def rigth_border(self):
+    def right_border(self):
         self.move_left()
         
     def bottom_border(self):

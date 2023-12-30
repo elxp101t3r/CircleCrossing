@@ -20,7 +20,7 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     choice(obs).move()
-    if p.distance(choice(obs)) < 50:
+    if p.distance(choice(obs)) < 40:
         screen.clear()
         s.game_over()
         game_is_on = False            
