@@ -12,7 +12,7 @@ class ObstacleManager(Turtle):
         self.shapesize(4, 4)
         self.color(choice(COLORS))
         self.setheading(180)
-        self.goto(randint(-70,270),randint(-250, 250))
+        self.goto(randint(-70,270),randint(-220, 220))
     def move(self):
         self.forward(STARTING_MOVE_DISTANCE)
     

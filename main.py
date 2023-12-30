@@ -9,7 +9,7 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 obs = []
-for i in range(0, 10):
+for i in range(0, 7):
     obs.append(ObstacleManager())
     
 p = Player()
@@ -20,7 +20,7 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     choice(obs).move()
-    if p.distance(choice(obs)) < 50:
+    if p.distance(choice(obs)) < 55:
         screen.clear()
         s.game_over()
         game_is_on = False            
