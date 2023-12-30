@@ -1,10 +1,10 @@
 import time
-from random import choice
+from random import choice, randint
 from turtle import Screen
 from player import Player
 from obstacle_manager import ObstacleManager
 from scoreboard import Scoreboard
-
+SPEED = 3
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
@@ -38,10 +38,14 @@ while game_is_on:
     if p.xcor() > 100:
         p.right_border()
     if p.ycor() == 280:
+        ObstacleManager().hideturtle()
+        ObstacleManager().goto(randint(-70,270),randint(-250, 250))
         p.hideturtle()
         p.goto(0, 280)
         p.check_position()
         p.showturtle()
+        ObstacleManager().showturtle()
+        ObstacleManager().speed(SPEED + 2)
         s.update_score()
     if p.ycor() < -280:
         p.bottom_border()
